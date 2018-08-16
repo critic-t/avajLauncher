@@ -7,9 +7,6 @@ import launcher.aircraft.*;
 import launcher.weather.*;
 import launcher.writer.*;
 
-/*
-    the heart of the program, where all the reading and simulation happens
-*/
 public class Main
 {
     private static WeatherTower weatherTower;
@@ -34,7 +31,6 @@ public class Main
                 }
                 while ((line = reader.readLine()) != null)
                 {
-                    //System.out.println(line);
                     Flyable flyable = AircraftFactory.newAircraft(line.split(" ")[0], line.split(" ")[1],
                             Integer.parseInt(line.split(" ")[2]), Integer.parseInt(line.split(" ")[3]),
                             Integer.parseInt(line.split(" ")[4]));
@@ -48,7 +44,6 @@ public class Main
                     flyable.registerTower(weatherTower);
                 }
                 for (int i = 1; i <= simulations; i++) {
-                    //writr.writetofile("simulation: " + i);
                     weatherTower.changeWeather();
                 }
             }

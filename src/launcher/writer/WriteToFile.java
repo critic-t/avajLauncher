@@ -5,10 +5,6 @@ import java.io.*;
 import launcher.aircraft.*;
 import launcher.weather.*;
 
-/*
-	creating and writing to file, still dont know why we couldnt just use the terminal stdout for this -_-
-*/
-
 public class WriteToFile {
     private static File file = null;
     private static FileWriter fileWriter = null;

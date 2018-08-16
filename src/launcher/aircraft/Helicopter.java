@@ -13,10 +13,6 @@ public class Helicopter extends Aircraft implements Flyable
         super(name, coordinates);
     }
 
-
-    /*
-     **  This function is to change the coordinates accordingly of the Flyable depending on the weather
-     */
     public void updateConditions()
     {
         int copyHeight = this.coordinates.getHeight();
@@ -50,7 +46,6 @@ public class Helicopter extends Aircraft implements Flyable
         }
     }
 
-    //flyable registers to a weather tower
     public void registerTower(WeatherTower weatherTower)
     {
         writr.writetofile("Tower says: " + "Helicopter#" + this.name + "(" + this.id + ")" + " registered to weather tower.");
@@ -58,7 +53,6 @@ public class Helicopter extends Aircraft implements Flyable
         weatherTower.register(this);
     }
 
-    //flyable unregisters from the weather tower
     public void unregisterTower(WeatherTower weatherTower)
     {
         writr.writetofile("Tower says: " + "Helicopter#" + this.name + "(" + this.id + ")" + " unregisteres from weather tower and lands.");
